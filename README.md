@@ -1,19 +1,21 @@
-# decrediton
+<img align="left" width="100" height="100" src="https://aequator.io/AEC_Logo_Final_RGB.svg">
 
-[![Build Status](https://travis-ci.org/decred/decrediton.png?branch=master)](https://travis-ci.org/decred/decrediton)
+aeqg - Æquator GUI wallet
+====
+[![Build Status](https://travis-ci.org/mc-aeq/aeqg.png?branch=master)](https://travis-ci.org/mc-aeq/aeqg)
 [![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](http://copyfree.org)
+[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/mc-aeq/aeqg)
 
-decrediton is a cross-platform GUI for decred written in node.js using
-Electron.
+aeqg is fork of [decred/decrediton], a cross-platform GUI for decred written in node.js using Electron.
 
 ## Installation
 
-Currently decrediton is available on Windows, Linux, and macOS.
+Currently aeqg is available on Windows, Linux, and macOS.
 
-Decrediton will NOT use or in any way disrupt the CLI wallet file you may
+aeqg will NOT use or in any way disrupt the CLI wallet file you may
 already be using at this time.
 
-Download the decrediton release for your operating system on [decred/decred-binaries](https://github.com/decred/decred-binaries/releases).
+Download the aeqg release for your operating system on [mc-aeq/binaries](https://github.com/mc-aeq/binaries/releases).
 
 On macOS, Ubuntu (14.04 LTS kernel 3.16 and later), and recent Debians, there should be
 no additional dependencies needed (exception: Ubuntu 18.04+, see [issue #1404](https://github.com/decred/decrediton/issues/1404)).
@@ -32,21 +34,21 @@ sudo dnf -y install libXScrnSaver
 
 On linux you will need to decompress the package:
 ```bash
-tar -xvzf decrediton-X.X.X.tar.gz
+tar -xvzf aeqg-X.X.X.tar.gz
 ```
 and then run the file:
 ```bash
-./decrediton
+./aeqg
 ```
 
 This will start dcrd and dcrwallet for you.
 
 On macOS, double-click the .dmg file, drag the .app to your
-Applications folder.  Double click on Decrediton.app to start.
+Applications folder.  Double click on aeqg.app to start.
 
 You can also install via [brew cask](https://caskroom.github.io):
 ```bash
-brew cask install decrediton
+brew cask install aeqg
 ```
 
 From there follow the on screen instructions to setup your wallet.
@@ -58,13 +60,13 @@ When running a release version, there are a few options available.
 To see additional debug information (including the output of dcrd and dcrwallet) run:
 
 ```
-decrediton --debug
+aeqg --debug
 ```
 
 To pass additional arguments to dcrwallet (such as to increase the logging level run:
 
 ```
-decrediton --extrawalletargs='-d=debug'
+aeqg --extrawalletargs='-d=debug'
 ```
 
 ## Developing
@@ -84,8 +86,8 @@ Adjust the following steps for the paths you want to use.
 ``` bash
 mkdir code
 cd code
-git clone https://github.com/decred/decrediton.git
-cd decrediton
+git clone https://github.com/mc-aeq/aeqg.git
+cd aeqg
 yarn
 mkdir bin/
 cp $GOPATH/bin/dcr* bin/
@@ -93,23 +95,23 @@ yarn dev
 ```
 
 ## Setting up your development environment
-The following steps will help you configure your decrediton development environment and reduce future startup times.
+The following steps will help you configure your aeqg development environment and reduce future startup times.
 
 ### Wallet
-When you launch decrediton, you will be prompted to select a wallet to use. Select your wallet or create a new one using the in-app wizard. Be sure to save your seed and make your password memorable.
+When you launch aeqg, you will be prompted to select a wallet to use. Select your wallet or create a new one using the in-app wizard. Be sure to save your seed and make your password memorable.
 
 ### Decred Node
-It will be helpful to you to run the Decred node in a separate process and simply attach to it between decrediton restarts. In order to see the advanced daemon configuration options you open your ```config.json``` and set the ```daemon_start_advanced``` flag to ```true``` as follows:
+It will be helpful to you to run the Decred node in a separate process and simply attach to it between aeqg restarts. In order to see the advanced daemon configuration options you open your ```config.json``` and set the ```daemon_start_advanced``` flag to ```true``` as follows:
 
 ```"daemon_start_advanced": true,```
 
 Note: Your config.json file is located in the following directory(s)
 
-Windows - ```C:\Users\<your-username>\AppData\Local\Decrediton\config.json```
+Windows - ```C:\Users\<your-username>\AppData\Local\aeqg\config.json```
 
-OSX - ```$HOME/Library/Application\ Support/Decrediton/config.json```
+OSX - ```$HOME/Library/Application\ Support/aeqg/config.json```
 
-Linux - ```~/.config/decrediton/config.json```
+Linux - ```~/.config/aeqg/config.json```
 
 Run the following to start the Decred daemon in a standalone terminal window:
 
@@ -148,12 +150,12 @@ You need to install dcrd, dcrwallet and dcrctl.
 - [dcrd/dcrctl installation instructions](https://github.com/decred/dcrd#updating)
 - [dcrwallet installation instructions](https://github.com/decred/dcrwallet#installation-and-updating)
 
-To build a packaged version of decrediton (including a dmg on OSX and
+To build a packaged version of aeqg (including a dmg on OSX and
 exe on Windows), follow the development steps above.  Then build the
 dcr command line tools:
 
 ```bash
-cd code/decrediton
+cd code/aeqg
 mkdir bin
 cp `which dcrd` bin/
 cp `which dcrctl` bin/
@@ -185,19 +187,21 @@ yarn package-dev-linux
 
 ## Contact
 
-If you have any further questions you can find us at:
-
-- irc.freenode.net (channel #decred)
-- [webchat](https://webchat.freenode.net/?channels=decred)
-- forum.decred.org
-- decred.slack.com
+If you want to get in touch with us, please visit our website https://aequator.io - all possible communication channels are listed there.
 
 ## Issue Tracker
 
-The
-[integrated github issue tracker](https://github.com/decred/decrediton/issues)
-is used for this project.
+We're using a private JIRA bugtracking system. Please foward us any issues and we'll assign them internally. If you want to join our bug tracking team, contact us and you'll get direct access to our JIRA instance.
+
+## Documentation
+
+Currently documentation is available in docs/ folder, but please be aware that those documentations may change at any given time.
 
 ## License
 
-decrediton is licensed under the [copyfree](http://copyfree.org) ISC License.
+aeqg is licensed under the [copyfree](http://copyfree.org) ISC License.
+aeqg is a fork from decrediton and also under the ISC License.
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+   [decred/decrediton]: <https://github.com/decred/decrediton> 
